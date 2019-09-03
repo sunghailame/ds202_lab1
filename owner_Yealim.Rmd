@@ -11,81 +11,14 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-This lab is more or less to help you get familiar with some of the tools we will be using in this class. Form a team of 2 to complete this lab. 
-
-You can use this RMarkDown file as a template for your work. You will need to submit your RMarkdown file and it will need to be full reproducible, i.e. the grader and I will 'knit' your submission. Make sure that you don't use any file structure that depends on your computing environment. 
-
-Instructions for submission of Lab 1 can be found at the end this document. 
-
 # Collaborating on a Repository
 
-Now you will collaborate on and make change to a partner's repo. Form a pair with your neighbor. One of you is the Owner of a repo, and the other is the Partner who collaborates on the same repo.
+**Step 1** 
 
-**Step 1**: Locate the local repo you will be collaborating on and share with your partner. 
-
-1. Owner: Create an `owner_YourName.Rmd` file. Add the following information into the file: 
     - Name?: Yealim Sung
     - What do you tell people about your field of study at a party?: Computer stuff
     - What are the three most important tools/strategies you use for organizing your work?: sticky notes, pencil case, and notepad
     - Interesting fact about yourself?: I lived in three different countries.
- 
-     Knit this file when finished. Make sure both files are in your repo. 
-  
-2. Owner: Push this file onto the remote repository (`git push`). Refresh the webpage on Github to see the changes. 
-
-3. Owner:  Share the url of your repo with the Partner. 
-
-4. Partner: Visit the url, and make sure you can see all the files (have read access). 
-
-5. Owner: Give the Partner push (write) access to your repo. On the webpage of the repo, click Settings -- Collaborators -- type in the Partner's username -- click Add collaborator
-
-**Step 2**: Partner: clone the remote repo, and add your changes.
-
-1. Partner: Clone the Owner's repo:
-    - In a terminal, `cd` into a directory to store the Owner's repo.
-    - Clone the Owner's repo, by the following command. The URL can be found in the the <span style="background:limegreen; color:white"> Clone or Download </span> button. 
-    ```
-    git clone https://github.com/username/repoName.git
-    ```
-        
-    - You have now a local copy of the Owner's repo.
-    - `cd` into the cloned repo.
-    
-2. Partner: Create a new Rmd file in the repo, and name it `partner_YourName.Rmd`. 
-
-3. Partner: Modify `partner_YourName.Rmd` to include the following information. Knit it when finished.
-
-   + Your (the "Partner's") full name and GitHub username. 
-   + What did the Owner do in the most recent commit? What is the commit ID?
-   + Knit the Owner's `owner_YourName.Rmd`. Are you able to do so without error? If you cannot, what errors did you encounter?
-   + Also include one tip for making Git/GitHub easier, or an error/difficulty you encountered.
-
-4. Partner: Add `partner.Rmd` and `partner.html` to the local git repo and make a new commit (you need `git add` and `git commit -m '...'`).  
-
-5. Partner: Pull updates (if any) from GitHub, and then push your changes to the remote repo (of the Owner's). 
-```
-git pull
-git push
-```
-
-**Step 3**: To finish the collaboration,
-
-1. Owner: See if your repo is updated on GitHub.
-
-2. Owner: Pull updates from GitHub to your local version, by
-```
-git pull
-```
-
-3. Owner: View the Partner's change on your local repo.
-
-You have completed a cycle of collaboration! Now the Owner and Partner switch role and repeat the previous process. 
-
-
-## Summary for Collaboration on GitHub
-1. The Owner pushes his/her local repo  to a  remote repo on GitHub, and gives the Partner access to the remote.
-2. The Partner clones (or pull from) the Owner's GitHub repo, makes local changes, commits, and then pushes the commits back.
-3. The Owner updates his/her local repo by `git pull` in order to obtain the changes made by the Partner. 
 
 # Understanding Concepts 
 
