@@ -15,27 +15,39 @@ knitr::opts_chunk$set(echo = TRUE)
 
 **Step 1** 
 
-    - Name?: Yealim Sung
-    - What do you tell people about your field of study at a party?: Computer stuff
-    - What are the three most important tools/strategies you use for organizing your work?: sticky notes, pencil case, and notepad
-    - Interesting fact about yourself?: I lived in three different countries.
+    Name? 
+    -> Yealim Sung
+    What do you tell people about your field of study at a party? 
+    -> Computer stuff
+    What are the three most important tools/strategies you use for organizing your work? 
+    -> sticky notes, pencil case, and notepad
+    Interesting fact about yourself? 
+    -> I lived in three different countries.
 
 # Understanding Concepts 
 
 You may work on this with your partner or individually. 
 
   1. Explain the difference between Git and Github.
+  - Git is a tool to control and revise, and Github is a hosting service which uses the git.
   
   2. Can Git and Github be used independently? Why don't we do so? Describe the advantages and disadvantages. 
-
+  - Yes, they can be used independently but by just using Git, it will be harder to share with others since it will only store the files in your local repository. It may be easier to use if you are the only person working on that project.
+  
   3. What is a repository in Git and how can you create a repository in Git (write out the command(s))? 
+  - Repository is a directory or storage space where you store all the files of your project. You can initialize a Git repository by using the command "git init" in the desired directory.
 
 # Coding Exercises 
 
   You may work on this with your partner or individually. 
 
   1. Write code to count the total number of `NA` occurrences in the vector `X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)`.
-
+  
+  ```{r}
+  X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)
+  sum(is.na(X))
+  ```
+  
   2. Run the following code: 
 
    ```{r}
@@ -43,6 +55,8 @@ You may work on this with your partner or individually.
    smoker = c('T','F','T','F','F','F')
    weight = c(120,137,0,168,91,142)
    example_data = data.frame(age,smoker,weight)
+   example_data[3,3] <- 150
+   example_data
    ```
    
   This code took three vectors (`age`, `smoker`, and `weight`) and binded them together into an `R` object known as a 
@@ -54,13 +68,25 @@ You may work on this with your partner or individually.
 
   3. In the following I have two code snippets. Turn these code snippets into functions. Think about what each function does
   and what you would name it. How many arguments does it need? 
+  
   ```{r, eval=FALSE}
-  mean(is.na(x))
+  find_mean <- function(x) {
+    return (mean(is.na(x)))
+  }
 
-  x / sum(x, na.rm = TRUE)
+  vector_sum <- function(x) {
+    y = sum(x, na.rm = TRUE)
+    return (x / y)
+  }
   ```
   
 4. Write a function named `both_na()`. This function take two vectors of the same length and returns the number of positions that have an `NA` value in both vectors. 
+
+  ```{r}
+  both_na <- function(x,y) {
+    return (sum(is.na(x) & is.na(y)))
+  }
+  ```
 
 # Submission 
 

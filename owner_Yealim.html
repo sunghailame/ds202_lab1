@@ -372,41 +372,80 @@ summary {
 <div id="collaborating-on-a-repository" class="section level1">
 <h1><span class="header-section-number">1</span> Collaborating on a Repository</h1>
 <p><strong>Step 1</strong></p>
-<pre><code>- Name?: Yealim Sung
-- What do you tell people about your field of study at a party?: Computer stuff
-- What are the three most important tools/strategies you use for organizing your work?: sticky notes, pencil case, and notepad
-- Interesting fact about yourself?: I lived in three different countries.</code></pre>
+<pre><code>Name? 
+-&gt; Yealim Sung
+What do you tell people about your field of study at a party? 
+-&gt; Computer stuff
+What are the three most important tools/strategies you use for organizing your work? 
+-&gt; sticky notes, pencil case, and notepad
+Interesting fact about yourself? 
+-&gt; I lived in three different countries.</code></pre>
 </div>
 <div id="understanding-concepts" class="section level1">
 <h1><span class="header-section-number">2</span> Understanding Concepts</h1>
 <p>You may work on this with your partner or individually.</p>
 <ol style="list-style-type: decimal">
-<li><p>Explain the difference between Git and Github.</p></li>
-<li><p>Can Git and Github be used independently? Why don’t we do so? Describe the advantages and disadvantages.</p></li>
-<li><p>What is a repository in Git and how can you create a repository in Git (write out the command(s))?</p></li>
+<li>Explain the difference between Git and Github.</li>
 </ol>
+<ul>
+<li>Git is a tool to control and revise, and Github is a hosting service which uses the git.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Can Git and Github be used independently? Why don’t we do so? Describe the advantages and disadvantages.</li>
+</ol>
+<ul>
+<li>Yes, they can be used independently but by just using Git, it will be harder to share with others since it will only store the files in your local repository. It may be easier to use if you are the only person working on that project.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>What is a repository in Git and how can you create a repository in Git (write out the command(s))?</li>
+</ol>
+<ul>
+<li>Repository is a directory or storage space where you store all the files of your project. You can initialize a Git repository by using the command “git init” in the desired directory.</li>
+</ul>
 </div>
 <div id="coding-exercises" class="section level1">
 <h1><span class="header-section-number">3</span> Coding Exercises</h1>
 <p>You may work on this with your partner or individually.</p>
 <ol style="list-style-type: decimal">
-<li><p>Write code to count the total number of <code>NA</code> occurrences in the vector <code>X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)</code>.</p></li>
-<li><p>Run the following code:</p></li>
+<li>Write code to count the total number of <code>NA</code> occurrences in the vector <code>X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)</code>.</li>
+</ol>
+<pre class="r"><code>X = c(47,34,33,65,37,NA,43,NA,11,NA,23,NA)
+sum(is.na(X))</code></pre>
+<pre><code>## [1] 4</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Run the following code:</li>
 </ol>
 <pre class="r"><code>age = c(25,30,45,60,12,41)
 smoker = c(&#39;T&#39;,&#39;F&#39;,&#39;T&#39;,&#39;F&#39;,&#39;F&#39;,&#39;F&#39;)
 weight = c(120,137,0,168,91,142)
-example_data = data.frame(age,smoker,weight)</code></pre>
+example_data = data.frame(age,smoker,weight)
+example_data[3,3] &lt;- 150
+example_data</code></pre>
+<pre><code>##   age smoker weight
+## 1  25      T    120
+## 2  30      F    137
+## 3  45      T    150
+## 4  60      F    168
+## 5  12      F     91
+## 6  41      F    142</code></pre>
 <p>This code took three vectors (<code>age</code>, <code>smoker</code>, and <code>weight</code>) and binded them together into an <code>R</code> object known as a <code>data.frame</code>. The advantage of <code>data.frame</code> is that it can handle vectors of different types. For example, age is a numeric vector but smoker status is a character vector (T or F). We named this <code>data.frame</code> as <code>example_data</code>. I obviously made a data entry error: someone cannot have 0 weight. The correct weight should be 150 pounds. Write one line of code that can easily correct this using the <code>[]</code> syntax.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>In the following I have two code snippets. Turn these code snippets into functions. Think about what each function does and what you would name it. How many arguments does it need?</li>
 </ol>
-<pre class="r"><code>mean(is.na(x))
+<pre class="r"><code>find_mean &lt;- function(x) {
+  return (mean(is.na(x)))
+}
 
-x / sum(x, na.rm = TRUE)</code></pre>
+vector_sum &lt;- function(x) {
+  y = sum(x, na.rm = TRUE)
+  return (x / y)
+}</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Write a function named <code>both_na()</code>. This function take two vectors of the same length and returns the number of positions that have an <code>NA</code> value in both vectors.</li>
 </ol>
+<pre class="r"><code>both_na &lt;- function(x,y) {
+  return (sum(is.na(x) &amp; is.na(y)))
+}</code></pre>
 </div>
 <div id="submission" class="section level1">
 <h1><span class="header-section-number">4</span> Submission</h1>
